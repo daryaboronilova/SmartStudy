@@ -1,0 +1,14 @@
+{% extends 'Djangoapp/layout.html' %}
+
+{% block title %}Динамическое расписание{% endblock %}
+
+{% block content %}
+<div class="container">
+{%  for item in news %}
+<div class="news1">
+    <h4><a href="{% url 'news' item.pk %}">{{item.title}}</a></h4>
+    <p class="news1-text">{{item.short_dest}}</p>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
