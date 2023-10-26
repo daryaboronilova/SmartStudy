@@ -2,28 +2,27 @@ from django.db import models
 
 
 # Create your models here.
-class Category(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Название')
+class Groups(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Номер группы')
 
     def __str__(self):
         return f'{self.name}'
 
     class Meta:
-        verbose_name = "Категория"
-        verbose_name_plural = "Категории"
+        verbose_name = "Группа"
+        verbose_name_plural = "Группы"
 
 
 class News(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Заголовок')
-    short_dest = models.CharField(max_length=255, verbose_name='Краткое описание новостей')
+    title = models.CharField(max_length=255, verbose_name='Название предмета')
+    groups = models.ForeignKey(Groups, on_delete=models.CASCADE, verbose_name='Группа',null=True)
+    short_dest = models.CharField(max_length=255, verbose_name='Тема лекции')
     content = models.TextField(verbose_name='Контент')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
-    photo = models.ImageField(upload_to='images/', verbose_name='Фото', blank=True, null=True)
-    is_published = models.BooleanField(default=True, verbose_name='Опубликовано?')
+    date = models.DateTimeField('Дата Публикации', null=True)
 
     def __str__(self):
         return f'{self.title}'
 
     class Meta:
-        verbose_name = "Новость"
-        verbose_name_plural = "Новости"
+        verbose_name = "Лекция"
+        verbose_name_plural = "Лекции"

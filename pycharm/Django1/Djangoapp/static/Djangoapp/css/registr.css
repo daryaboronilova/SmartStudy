@@ -1,5 +1,6 @@
-.forma {
-     max-width: 600px;
-     margin-top: 20px;
-     margin-left: auto;
-     margin-right: auto;
+@import "Djangoapp.css"
+body {
+    background: pink;
+}
+
+

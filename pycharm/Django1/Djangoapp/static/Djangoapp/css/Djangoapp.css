@@ -1,3 +1,4 @@
+
 body {
     background: #E0FFFF;
 min-height: 100vh;
@@ -69,7 +70,12 @@ main .features1 {
 .features button{
     color: black;
 }
-
+.aaa{
+     max-width: 600px;
+     margin-top: 20px;
+     margin-left: auto;
+     margin-right: auto;
+}
 .container py-5{
     margin-top: 20px;
     margin-left: auto;
@@ -96,3 +102,11 @@ main .container{
    text-align: center;
     margin: 0 auto;
 }
+main .container .news1 {
+ border: 1px solid #000;
+ width: 50%;
+ height: inherit;
+ padding: 10px;
+ border-radius: 10px;
+}
+

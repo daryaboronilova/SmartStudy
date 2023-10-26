@@ -1,11 +1,9 @@
 {% extends 'Djangoapp/layout.html' %}
 {% block bok %}{% endblock %}
 {% load static %}
+<link rel="stylesheet" href="Djangoapp.css">
 {% block title %}SmartStudy{% endblock %}
-
-
 {% block content %}
-
 <div class="features">
     <img src="{% static 'Djangoapp/img/Logo-fotor-bg-remover-20231010155255.png' %}" alt="Лого">
     <h3>Вход</h3>
@@ -26,5 +24,4 @@
         <button class="btn btn-info"><a href="{% url 'registr' %}">Регистрация</a></button>
     </form>
 </div>
-
 {% endblock %}

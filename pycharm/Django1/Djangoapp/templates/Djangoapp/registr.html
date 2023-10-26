@@ -1,10 +1,11 @@
 {% extends 'Djangoapp/layout.html' %}
+{% load static %}
 {% block bok %}{% endblock %}
+
+<link rel="stylesheet" type="text/css" href=registr.css">
+
 {% block title %}Регистрация{% endblock %}
-<link rel="stylesheet" href="registr.css">
-
 {% block content %}
-
 <form>
   <div class="aaa">
     <h2>Регистрация</h2>
@@ -43,5 +44,4 @@
     <button class="btn btn-info" type="submit"><a href="{% url 'home' %}">Зарегистрироваться</a></button>
   </div>
 </form>
-
 {% endblock %}
